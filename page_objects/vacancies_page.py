@@ -11,7 +11,9 @@ class VacanciesPage(BasePage):
     __departmentOption = (By.XPATH, "//a[contains(text(),'Research & Development')]")
     __languageOption = (By.XPATH, "//label[contains(text(),'English')]")
     __filteredResults = (By.XPATH, "//a[@class='card card-sm card-no-hover']")
-    __expectedCount = 4
+
+    ### AT THE MOMENT THIS TEST IS SUBMITTED, THERE ARE 3 OPEN VACANCIES AT VEEAM CARRER FOR THIS FILTER.
+    __expectedCount = 3
 
     def __init__(self, driver: WebDriver):
         super().__init__(driver)
