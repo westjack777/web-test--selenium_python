@@ -4,16 +4,23 @@ from page_objects.base_page import BasePage
 
 
 class VacanciesPage(BasePage):
+    ### AT THE MOMENT THIS TEST IS SUBMITTED, THERE ARE 3 OPEN VACANCIES AT VEEAM CARRER FOR THIS FILTER.
+    __expectedCount = 3
+
+    ### DEFINE FILTER VARIABLES
+    __department = "Research & Development"
+    __language = "English"
+
+
     __url = "https://cz.careers.veeam.com/vacancies"
     __cookies = (By.XPATH, "//div[@id='cookiescript_accept']")
     __departmentsField = (By.XPATH, "//button[contains(text(),'All departments')]")
     __languagesField = (By.XPATH, "//button[contains(text(),'All languages')]")
-    __departmentOption = (By.XPATH, "//a[contains(text(),'Research & Development')]")
-    __languageOption = (By.XPATH, "//label[contains(text(),'English')]")
+    __departmentOption = (By.XPATH, "//a[contains(text(),'" + __department + "')]")
+    __languageOption = (By.XPATH, "//label[contains(text(),'" + __language + "')]")
     __filteredResults = (By.XPATH, "//a[@class='card card-sm card-no-hover']")
 
-    ### AT THE MOMENT THIS TEST IS SUBMITTED, THERE ARE 3 OPEN VACANCIES AT VEEAM CARRER FOR THIS FILTER.
-    __expectedCount = 3
+
 
     def __init__(self, driver: WebDriver):
         super().__init__(driver)
