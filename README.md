@@ -1,6 +1,6 @@
-# Web Automation using Robot Framework + Selenium
+# Web Automation using Python + Selenium
 Use this guide to:
- * Prepare your machine to run Robot Framework and Selenium tests
+ * Prepare your machine to run Python and Selenium tests
  * Run a test case
 
 ## I. Pre-requirement
@@ -17,19 +17,13 @@ Get **pip** from [here](https://pip.pypa.io/en/stable/installation/)
 pip install -r requirements.txt
 ```
 
-### 4. Download Chrome Web-driver
-Get **chromedriver** from [here](https://sites.google.com/chromium.org/driver/)
+### 4. Web-drivers
+Use thw WebdriverManager to get the proper drivers.
 
 ### 5. Add Web-drivers to `PATH` environment variable.
  1. After downloading the web-driver, add it to your Python's `SCRIPT` folder
 
-## II. Run example
+## II. Run test
 ```
-robot -d log TestCases
+ python -m pytest @vacancies
 ```
-
-## III. Selenium Library
-Please view them at [here](http://robotframework.org/SeleniumLibrary/SeleniumLibrary.html#Create%20Webdriver)
-
-## IV. RobotFramework License
-Please read at [here](https://github.com/ducdhm/robotframework-selenium-example/blob/master/LICENSE.md)
