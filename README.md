@@ -25,5 +25,6 @@ Use thw WebdriverManager to get the proper drivers.
 
 ## II. Run test
 ```
+ git clone https://github.com/westjack777/webtesting-assessment
  python -m pytest @vacancies
 ```
